@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NFC Reader</string>
+    <string name="ready_to_scan_payment_card">Ready to scan payment card</string>
+    <string name="hold_your_card_against_the_back_of_your_phone">Hold your card against the back of your phone</string>
+</resources>

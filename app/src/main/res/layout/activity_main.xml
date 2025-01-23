@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/nfcStatusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:padding="16dp"
+        android:text="@string/ready_to_scan_payment_card"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/creditCardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/nfcStatusText"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#1A237E"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/chipImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_chip" />
+
+            <TextView
+                android:id="@+id/cardTypeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="CARD TYPE"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cardNumberText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chipImage"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.1"
+                android:text="**** **** **** ****"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cardNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardNumberText"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.1"
+                android:text="Test User"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/expiryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardNameText"
+                android:layout_marginTop="5dp"
+                android:text="VALID THRU"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/expiryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expiryLabel"
+                android:text="MM/YY"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cvvLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardNameText"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:text=" CVV  "
+                android:textColor="#AAAAAA"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/cvvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expiryLabel"
+                android:layout_alignParentEnd="true"
+                android:text="XXX"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/creditCardView"
+        android:layout_marginTop="32dp"
+        android:text="@string/hold_your_card_against_the_back_of_your_phone"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/contentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instructionText"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+</RelativeLayout>
